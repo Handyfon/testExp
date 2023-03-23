@@ -16,6 +16,9 @@ window.addEventListener("message", function (event) {
   checkContent("input", "name", "race")[0].value = event.data.race;
   checkContent("input", "name", "background")[0].value = event.data.background;
   checkContent("input", "name", "alignment")[0].value = event.data.align;
+
+  $(".image")[0].src = event.data.image
+
   var saveAmount = checkContent("div", "class", "saves")[0].children[0]
     .childElementCount;
   for (var i = 0; i < saveAmount; i++) {
