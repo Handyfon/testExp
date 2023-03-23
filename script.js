@@ -112,7 +112,7 @@ window.addEventListener("message", function (event) {
   for (var z = 0; z < event.data.traits.length; z++) {
     var textArea = checkContent("textarea", "name", "features", false)[0];
     textArea.innerHTML += event.data.traits[z].trait + "\r\n";
-    textArea.innerHTML += event.data.traits[z].descrtiption";
+    textArea.innerHTML += event.data.traits[z].description";
   }
 
   if (
