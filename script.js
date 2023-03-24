@@ -145,7 +145,7 @@ window.addEventListener("message", function (event) {
       event.data.spells[a].range;
     checkContent("input", "name", "spellduration", false)[a].value =
       event.data.spells[a].duration;
-      checkContent("input", "name", "spellnotes", false)[a].value =
+      checkContent("input", "name", "spelldes", false)[a].value =
       event.data.spells[a].description;
   }
 
