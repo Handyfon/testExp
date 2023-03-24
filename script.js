@@ -145,7 +145,7 @@ window.addEventListener("message", function (event) {
       event.data.spells[a].range;
     checkContent("input", "name", "spellduration", false)[a].value =
       event.data.spells[a].duration;
-      checkContent("input", "name", "spelldes", false)[a].value =
+      checkContent("input", "name", "spellnotes", false)[a].value =
       event.data.spells[a].description;
   }
 
@@ -473,7 +473,6 @@ function add_spell() {
   var cell7 = row.insertCell(7);
   var cell8 = row.insertCell(8);
   var cell9 = row.insertCell(9);
-  var cell10 = row.insertCell(10);
 
   cell0.innerHTML =
     "<td><input name='spellprep" + rows_spells + "' type='checkbox' /></td>";
@@ -495,8 +494,6 @@ function add_spell() {
     "<td><input name='spellcomponents" + rows_spells + "' type='text' /></td>";
   cell9.innerHTML =
     "<td><input name='spellnotes" + rows_spells + "' type='text' /></td>";
-  cell10.innerHTML =
-    "<td><input name='spelldes" + rows_spells + "' type='text' /></td>";
 
   rows_spells += 1;
   $("[name='rows_spells']").val(rows_spells);
