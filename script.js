@@ -145,7 +145,7 @@ window.addEventListener("message", function (event) {
       event.data.spells[a].range;
     checkContent("input", "name", "spellduration", false)[a].value =
       event.data.spells[a].duration;
-      checkContent("input", "name", "spellnotes", false)[a].value =
+    checkContent("input", "name", "spellnotes", false)[a].value =
       event.data.spells[a].des;
   }
 
@@ -293,7 +293,8 @@ function save_character() {
   }
   data = JSON.stringify(data[formIdentifier], null, 2);
   type = "application/json";
-
+  //ADD IMAGE
+  data = data.split("\n}`")[0] + '"image: ' + document.getElementsByClassName("image")[0].src + '"' + data.split("\n}`")[1]
   // Save JSON to file
   var file = new Blob([data], { type: type });
   if (window.navigator.msSaveOrOpenBlob)
