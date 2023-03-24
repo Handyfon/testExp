@@ -291,10 +291,11 @@ function save_character() {
       }
     }
   }
+    //ADD IMAGE
+  data["https://handyfon.github.io/testExp.github.io/ charsheet"].image = document.getElementsByClassName("image")[0].src;
   data = JSON.stringify(data[formIdentifier], null, 2);
   type = "application/json";
-  //ADD IMAGE
-  data = data.split("\n}`")[0] + '"image: ' + document.getElementsByClassName("image")[0].src + '"' + data.split("\n}`")[1]
+
   // Save JSON to file
   var file = new Blob([data], { type: type });
   if (window.navigator.msSaveOrOpenBlob)
